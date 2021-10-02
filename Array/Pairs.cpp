@@ -4,36 +4,42 @@
 
 using namespace std;
 
-vector<int> pairSum(vector<int> arr, int target){
-  unordered_set<int> s;
+vector<int> pairSum(vector<int> arr, int target)
+{
+	unordered_set<int> s;
 
-  vector<int> result;
+	vector<int> result;
 
-  for(auto i: arr){
-    int x = target - i;
+	for (auto i : arr)
+	{
+		int x = target - i;
 
-    if(s.find(x) != s.end()){
-      result.push_back(i);
-      result.push_back(x);
-    }
-    else{
-      s.insert(i);
-    }
-  }
+		if (s.find(x) != s.end())
+		{
+			result.push_back(i);
+			result.push_back(x);
+		}
+		else
+		{
+			s.insert(i);
+		}
+	}
 
-  return result;
+	return result;
 }
 
-int main(int argc, char const *argv[]) {
-  vector<int> arr{10, 5, 2, 3, -6, 9, 11};
+int main(int argc, char const *argv[])
+{
+	vector<int> arr{10, 5, 2, 3, -6, 9, 11};
 
-  int target = 4;
+	int target = 4;
 
-  auto res = pairSum(arr, target);
+	auto res = pairSum(arr, target);
 
-  for(auto i: res){
-    cout << i << " ";
-  }
+	for (auto i : res)
+	{
+		cout << i << " ";
+	}
 
-  return 0;
+	return 0;
 }
