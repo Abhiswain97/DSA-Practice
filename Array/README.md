@@ -25,4 +25,6 @@
     For each element in the array, check for the peak `a[i] > a[i-1] and a[i] > a[i+1]`
     Now when you find a peak, go down the left til 1 and go down right until n - 2
     Keep a counter (cnt) which keeps on increasing.
-    We keep track of peaks using `largest = max(largest, cnt)` 
+    We keep track of peaks using `largest = max(largest, cnt)`
+
+  - Time Complexity: `O(n)` 
